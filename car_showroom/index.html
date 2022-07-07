@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Salon samochodowy</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/car_showroom/style.css">
+    
+ 
+   
+    
+  </head>  
+  <body>
+    
+    
+     <!--//////////////////////////////MENU////////////////////////////////-->
+    
+      <div id="menu">
+      
+		
+                
+                <ul>
+                 
+                    <li><a href="#oferta">Oferta</a></li>
+                    <li><a href="#">Dlaczego warto</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+
+                </ul>
+     
+    </div>
+    
+    
+    <!--//////////////////////////////OFERTA////////////////////////////////-->
+    
+    <div id="oferta" >
+      
+      <h1>
+        Oferta
+      </h1>
+      
+      
+     
+  <div class="trzy-kolumny"><h2>
+    Samochody nowe
+    </h2>
+    
+    <img class="info" src="https://cdn.glitch.com/fb54ad42-b82c-47b9-bd60-8c6685a09006%2Fmarcus-p-oUBjd22gF6w-unsplash.jpg?v=1584896355501">
+    
+       
+       
+       <p>
+         Nowe Samochody dostępne w atrakcyjnej ofercie. Wybierz swój model już dziś !
+    </p></div>
+  <div class="trzy-kolumny"><h2>
+    Samochody używane
+    </h2>
+    <img class="info" src="https://cdn.glitch.com/fb54ad42-b82c-47b9-bd60-8c6685a09006%2Falex-suprun-A53o1drQS2k-unsplash.jpg?v=1584896701042">
+       <p>
+         Zakup samochodu używanego z gwarancją komfortu i jakości potwierdzoną Certyfikatem Jakości DEKRA.
+    </p></div>
+  <div class="trzy-kolumny"><h2>
+    Jazda testowa
+    </h2>
+    <img class="info" src="https://cdn.glitch.com/fb54ad42-b82c-47b9-bd60-8c6685a09006%2Fzakaria-zayane-FGevWnYo6MA-unsplash.jpg?v=1584891274009">
+       <p>
+         Nie wierzysz? Przyjrzyj mu się z bliska w naszym salonie i umów swój termin jazdy testowej.
+    </p></div>
+</div> 
+      
+    
+    
+   
+    
+    
+   
+     <!--////////////////////////////GALERIA/////////////////////////////////////////-->
+    
+    <div id="galeria">
+       
+    <h1>
+        Galeria
+      </h1>
+      
+      
+      <img class="zdj-galeria" src="https://cdn.glitch.com/fb54ad42-b82c-47b9-bd60-8c6685a09006%2Folav-tvedt-6lSBynPRaAQ-unsplash.jpg?v=1584821124986">
+      <img class="zdj-galeria" src="https://cdn.glitch.com/fb54ad42-b82c-47b9-bd60-8c6685a09006%2Falan-biglow-mD6r1HHZaZ8-unsplash.jpg?v=1584821143688">
+      <img class="zdj-galeria" src="https://cdn.glitch.com/fb54ad42-b82c-47b9-bd60-8c6685a09006%2Fspencer-davis-w8z8ouboWfU-unsplash.jpg?v=1584821164358">
+      
+     
+     
+    </div>
+    
+    
+     <!--///////////////////////STOPKA////////////////////////////////////////-->
+    
+  <div id="stopka">
+    
+   
+  <div class="dwie-kolumny">
+     
+    <table id="kontakt">
+      <tr>
+        <th>Lokalizacja:</th>
+        <td>Warszawa Krucza</td>
+      </tr>
+      <tr>
+        <th>Numer kontaktowy:</th>
+        <td>123-456-789</td>
+      </tr>
+      <tr>
+        <th>E-mail:</th>
+        <td>giganci@giganci.pl</td>
+      </tr>
+    </table>
+    
+    
+    
+     </div>
+  <div class="dwie-kolumny">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.870871723564!2d21.01584251531749!3d52.227563779759855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccf1af2ce34d%3A0x406e6aa311edbf6f!2sKrucza%2C%20Warszawa!5e0!3m2!1spl!2spl!4v1584814426947!5m2!1spl!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+     
+     
+     </div>
+  </div> 
+    
+    
+  
+    
+<script>
+  //zmienna dzięki, której będziemy wybierać konkretne zdjęcie 
+let numerZdjecia = 0;
+  //zmienna kolekcji naszych wszystkich zdjęć
+const wszystkieZdjecia = document.getElementsByClassName("zdj-galeria");
+  
+slajder();
+
+
+      
+function slajder() {
+
+  //ukrywamy wszystkie dodane zdjęcia w galerii
+ for ( let i = 0; i < wszystkieZdjecia.length; i++) {
+   wszystkieZdjecia[i].style.display = 'none';
+  }
+  
+ //jeśli wyświetliliśmy już ostatnie zdjęcie to wyświetlamy od początku
+  if (numerZdjecia >= wszystkieZdjecia.length) {
+  
+    numerZdjecia = 0;
+  }
+  //wybiermay konkretne zdjęcie i wyświetlamy
+  wszystkieZdjecia[numerZdjecia].style.display = 'block';
+  numerZdjecia++;      
+  setTimeout(slajder, 3000); 
+  
+}
+
+</script>
+  
+  </body>
+</html>
